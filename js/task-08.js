@@ -5,12 +5,15 @@ const namePasswordEl = document.querySelector('input[name="password"]');
 
 const OnSubmitClick = event => {
     event.preventDefault();
+    const { email, password } = event.currentTarget.elements;
     if (nameInputEl.value === '' || namePasswordEl.value === '') {
         alert('будь ласка, заповніть усі поля')
     } else {
-        const emailValue = event.currentTarget.elements.email.value;
-        const passwordValue = event.currentTarget.elements.password.value;
-        console.log(`email: ${emailValue}, password: ${passwordValue}`);
+        const userBase = {
+            email: email.value,
+            password: password.value,
+        }
+        console.log(userBase);
         event.currentTarget.reset();
 
     }

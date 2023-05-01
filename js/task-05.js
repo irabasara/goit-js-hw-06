@@ -3,7 +3,12 @@ const outputEl = document.querySelector('#name-output');
 
 
 const onOutputEl = event =>
-    outputEl.textContent = event.currentTarget.value;
+    {if (event.currentTarget.value !== '') {
+     outputEl.textContent = event.currentTarget.value;;
+  } else {
+    outputEl.textContent = 'Anonymous';
+  }
+   }
 
 
 inputEl.addEventListener('input', onOutputEl);
