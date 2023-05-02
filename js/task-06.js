@@ -3,7 +3,7 @@ const lengthOnEl = userInputEl.getAttribute('data-length');
 
 
 const findLengthOnInputEl = (event) => {
-    if (event.currentTarget.value.length >= lengthOnEl) {
+    if (event.currentTarget.value.length == lengthOnEl) {
         userInputEl.classList.remove('invalid')
         userInputEl.classList.add('valid');
     } else {
